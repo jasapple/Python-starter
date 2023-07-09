@@ -11,4 +11,4 @@
 	ArgParse was preferred as most environments we could control added arguments in a programatic way and for quick CLI testing
 	<TODO> add config file feature
 
-	Logging levels is ideal when using a loggin aggregation platform, such as the ELK Stack, Splunk, or AWS CloudTrail.
+	Logging levels is ideal when using a logging aggregation platform, such as the ELK Stack, Splunk, or AWS CloudWatch.
