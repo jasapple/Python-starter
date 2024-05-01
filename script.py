@@ -7,13 +7,13 @@ import argparse
 import logging
 import time
 
-logging.basicConfig(format='%(asctime)s [%(levelname)s] - %(message)s', datefmt='%Y-%m-%dT%H:%M:%S %Z')
-logging.Formatter.converter = time.gmtime
+logging.basicConfig(format='%(asctime)s [%(levelname)s] - %(message)s', datefmt='%Y-%m-%dT%H:%M:%S %Z') #ISO 8601
+logging.Formatter.converter = time.gmtime #UTC time
 logger = logging.getLogger()
 logger.setLevel(logging.ERROR)
 
 def main():
-    exit()
+    exit(0)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Cool script description here.')
@@ -36,4 +36,5 @@ if __name__ == "__main__":
     try:
         main()
     except (Exception):
-        logger.error(exc_info=True)
+        logger.critical("main() exception caught", exc_info=True)
+        exit(-1)
